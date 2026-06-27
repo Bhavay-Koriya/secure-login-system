@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.card{
+width:450px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:20px;
+text-align:center;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+img{
+width:120px;
+height:120px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+h1{
+margin-bottom:10px;
+}
+
+p{
+font-size:18px;
+margin:10px 0;
+}
+
+button{
+margin-top:25px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#007BFF;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#0056d2;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<h1>Welcome <%= user.username %></h1>
+
+<p><strong>Email:</strong> <%= user.email %></p>
+
+<p>You have successfully logged into the Secure Login System.</p>
+
+<form action="/logout" method="POST">
+<button>Logout</button>
+</form>
+
+</div>
+
+</body>
+</html>
